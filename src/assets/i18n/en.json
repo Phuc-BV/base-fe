@@ -1,0 +1,72 @@
+{
+    "button": {
+        "login": "Login",
+        "logout": "Logout",
+        "search": "Search",
+        "register": "Register",
+        "cancel": "Cancel",
+        "ok": "Agree",
+        "exportCsv": "Export csv"
+    },
+    "validation": {
+        "mes1": "Please double check your input",
+        "mes2": "Successful registration",
+        "mes3": "Registration failed. Please check again",
+        "mes4": "Please select value"
+    },
+    "menu": {
+        "home": "Home",
+        "shop": "Shop",
+        "customer": "Customer",
+        "admin": "User/Admin",
+        "endow": "Endow",
+        "scheduleBooking": "Schedule booking",
+        "post": "Post",
+        "adv": "Advertisement",
+        "loyalty": "Loyalty",
+        "revenue": "Revenue",
+        "shopStore": "Store",
+        "shopOwner": "Store owner",
+        "customers": "Customers",
+        "admins": "Admins",
+        "vouchers": "Vouchers",
+        "events": "Events",
+        "scheduleBookings": "Bookings",
+        "posts": "Posts",
+        "advList": "Advertisements",
+        "loyalties": "Loyalties",
+        "revenueShop": "Store"
+    },
+    "label": {
+        "nonSelect": "Select item",
+        "nameShop": "Shop name",
+        "phoneNumber": "Phone number",
+        "gender": "Gender",
+        "service": "Service",
+        "province": "Province",
+        "district": "District",
+        "address": "Address",
+        "status": "Status",
+        "activeStatus": "Activate",
+        "pauseStatus": "Deactivate",
+        "receiveStatus": "Received",
+        "confirmStatus": "Confirmed",
+        "successStatus": "Accomplished",
+        "cancelStatus": "Cancelled",
+        "record": "Record",
+        "all": "All"
+    },
+    "columnHeaders": {
+        "id": "ID",
+        "amount": "Amount",
+        "applyService": "Apply Service",
+        "cashDiscount": "Cash Discount",
+        "endDate": "End Date",
+        "idImage": "ID Image",
+        "imageUrl": "Image URL",
+        "name": "Name",
+        "percentDiscount": "Percent Discount",
+        "startDate": "Start Date",
+        "type": "Type"
+    }
+}

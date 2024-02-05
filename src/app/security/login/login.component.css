@@ -1,0 +1,35 @@
+.surface-ground {
+    background-color: #eff3f8;
+}
+
+.surface-card {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+:host ::ng-deep .p-password .p-password-input {
+    width: 100% !important;
+    padding: 8px !important;
+}
+
+:host ::ng-deep .min-w-screen {
+    min-width: unset !important;
+}
+
+.reset:hover {
+    text-decoration: underline;
+    color: var(--primary-color) !important;
+}
+
+.err {
+    color: #e24c4c;
+}
+
+.p-button,
+.p-button:hover {
+    background: rgba(255, 156, 134, 1);
+    border-color: rgba(255, 156, 134, 1);
+}
+
+.min-h-screen {
+    background-image: url(/assets/img/Group.png);
+}

@@ -1,0 +1,87 @@
+<div class="col-12">
+    <div class="card">
+        <form [formGroup]="formGroupSearch">
+            <div class="grid col-12 m-0 pl-0 pr-0">
+                <div class="col-3 p-0 flex align-items-center">
+                    <label class="col-4 text-right text-sm font-semibold">{{ 'label.nameShop' | translate }}</label>
+                    <input class="col-8" pInputText type="text" name="userName" formCtrName="shopName" />
+                </div>
+                <div class="col-3 p-0 flex align-items-center">
+                    <label class="col-4 text-right text-sm font-semibold">{{ 'label.phoneNumber' | translate }}</label>
+                    <input class="col-8" pInputText type="text" name="userName" formCtrName="phoneNumber" />
+                </div>
+                <div class="col-3 p-0 flex align-items-center">
+                    <label class="col-4 text-right text-sm font-semibold">{{ 'label.gender' | translate }}</label>
+                    <div class="col-8 p-0">
+                        <app-dropdown-common [data]="genderDropdown" [formGroup]="formGroupSearch" formCtrName="gender"
+                            opValue="value" opName="name" [filter]="false" [clear]="true"
+                            placeholder="{{ 'label.nonSelect' | translate }}">
+                        </app-dropdown-common>
+                    </div>
+                </div>
+                <div class="col-3 p-0 flex align-items-center">
+                    <label class="col-4 text-right text-sm font-semibold">{{ 'label.service' | translate }}</label>
+                    <div class="col-8 p-0">
+                        <app-dropdown-common [formGroup]="formGroupSearch" formCtrName="service" opValue="code"
+                            opName="name" [filter]="false" [clear]="true"
+                            placeholder="{{ 'label.nonSelect' | translate }}">
+                        </app-dropdown-common>
+                    </div>
+                </div>
+            </div>
+            <div class="grid col-12 m-0 pl-0 pr-0 pt-0">
+                <div class="col-3 p-0 flex align-items-center">
+                    <label class="col-4 text-right text-sm font-semibold">{{ 'label.province' | translate }}</label>
+                    <div class="col-8 p-0">
+                        <app-dropdown-common [data]="provinces" [formGroup]="formGroupSearch" formCtrName="provinceCode"
+                            opValue="provinceCode" opName="nameProvince" [filter]="false" [clear]="true"
+                            placeholder="{{ 'label.nonSelect' | translate }}">
+                        </app-dropdown-common>
+                    </div>
+                </div>
+                <div class="col-3 p-0 flex align-items-center">
+                    <label class="col-4 text-right text-sm font-semibold">{{ 'label.district' | translate }}</label>
+                    <div class="col-8 p-0">
+                        <app-dropdown-common [data]="districts" [formGroup]="formGroupSearch" formCtrName="districtCode"
+                            opValue="districtCode" opName="nameDistrict" [filter]="false" [clear]="true"
+                            placeholder="{{ 'label.nonSelect' | translate }}">
+                        </app-dropdown-common>
+                    </div>
+                </div>
+                <div class="col-3 p-0 flex align-items-center">
+                    <label class="col-4 text-right text-sm font-semibold">{{ 'label.address' | translate }}</label>
+                    <input class="col-8" pInputText type="text" name="userName" formCtrName="address" />
+                </div>
+                <div class="col-3 p-0"></div>
+            </div>
+        </form>
+        <div class="grid col-12 m-0 p-0 justify-content-end">
+            <div class="w-8rem pr-2">
+                <app-button-common styleClass="search" labelName="{{ 'button.search' | translate }}" [disabled]="false">
+                </app-button-common>
+            </div>
+            <div class="w-8rem">
+                <app-button-common styleClass="export" labelName="{{ 'button.exportCsv' | translate }}"
+                    [disabled]="false" (click)="deleteData($event)">
+                </app-button-common>
+            </div>
+            <div class="pr-1 pl-1 ">
+                <div class="border-left-2"></div>
+            </div>
+            <div class="w-8rem">
+                <app-button-common styleClass="export" labelName="{{ 'button.register' | translate }}"
+                    [disabled]="false">
+                </app-button-common>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-2">
+        <app-table-common [showStatus]="1" [currentPage]="currentPage" [pageSize]="pageSize" [totalRecord]="totalRecord"
+            [totalItemsOnePage]="products" [data]="products" [columns]="tableColumns"
+            (changeEmitterEdit)="editData($event)" [isDetail]="false" (changeEmitterDelete)="deleteData($event)"
+            (changeEmitterPaginator)="pageClick($event)"
+            (changeEmitterStatus)="changeStatus($event)"></app-table-common>
+    </div>
+</div>
+<app-toast-common [action]="apiResponse"></app-toast-common>
+<app-confirm-common [actionDelete]="confirmAction" (statusEvt)="deleteConfirmClick($event)"></app-confirm-common>

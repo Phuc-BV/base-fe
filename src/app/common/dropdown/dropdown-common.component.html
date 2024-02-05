@@ -1,0 +1,7 @@
+<div [formGroup]="formGroup" class="relative">
+    <p-dropdown class="change-padding-dropdown width-dropdown" [appendTo]="body" [options]="data"
+        [optionValue]="opValue" [optionLabel]="opName" [formControlName]="formCtrName" [filter]="filter"
+        [placeholder]="placeholder" [autofocusFilter]="false" (onClick)="emitClick($event)" [disabled]="disabled"
+        (onChange)="emitChange($event)" [showClear]="clear" [scrollHeight]="scrollHeight"
+        [styleClass]="styleClass"></p-dropdown>
+</div>

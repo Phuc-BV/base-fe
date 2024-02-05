@@ -1,0 +1,30 @@
+:host ::ng-deep .search,
+:host ::ng-deep .export {
+    height: 33px;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+}
+
+:host ::ng-deep .search {
+    background-color: rgba(255, 156, 134, 1);
+    border: 1px solid rgba(255, 156, 134, 1);
+}
+
+:host ::ng-deep .export,
+:host ::ng-deep .export.p-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 156, 134, 1);
+    color: rgba(255, 156, 134, 1);
+}
+
+:host ::ng-deep .search span,
+:host ::ng-deep .export span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+:host ::ng-deep .search.p-button:hover {
+    background-color: rgba(255, 156, 134, 1);
+    border: 1px solid rgba(255, 156, 134, 1);
+}

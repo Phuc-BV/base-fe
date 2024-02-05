@@ -1,0 +1,9 @@
+<p-confirmDialog class="common-dialog" #cd [style]="{width: '32vw'}" key="positionDialog" [position]="position"
+    rejectButtonStyleClass="p-button-outlined" header="Xác nhận xóa" message="Bạn có muốn xóa bản ghi không?">
+    <ng-template pTemplate="footer">
+        <button type="button" pButton class="ok-button" label="Đồng ý" (click)="cd.accept()"
+            [style]="{width: '100px',  height: '33px'}"></button>
+        <button type="button" [style]="{width: '100px',height: '33px'}" class="cancel-button" pButton label="Hủy"
+            (click)="cd.reject()"></button>
+    </ng-template>
+</p-confirmDialog>

@@ -1,0 +1,72 @@
+{
+    "button": {
+        "login": "Đăng nhập",
+        "logout": "Đăng xuất",
+        "search": "Tìm kiếm",
+        "register": "Thêm mới",
+        "cancel": "Hủy bỏ",
+        "ok": "Đồng ý",
+        "exportCsv": "Xuất csv"
+    },
+    "validation": {
+        "mes1": "Vui lòng kiểm tra lại nội dung nhập",
+        "mes2": "Đăng ký thành công",
+        "mes3": "Đăng ký thất bại. Vui lòng kiểm tra lại",
+        "mes4": "Vui lòng lựa chọn giá trị"
+    },
+    "menu": {
+        "home": "Trang chủ",
+        "shop": "Quản lý shop",
+        "customer": "Khách hàng",
+        "admin": "Quản trị viên",
+        "endow": "Ưu đãi",
+        "scheduleBooking": "Lịch đặt",
+        "post": "Bài đăng",
+        "adv": "Quảng cáo",
+        "loyalty": "Hạng thành viên",
+        "revenue": "Doanh thu",
+        "shopStore": "Cửa hàng",
+        "shopOwner": "Chủ cửa hàng",
+        "customers": "Danh sách khách hàng",
+        "admins": "Danh sách quản trị",
+        "vouchers": "Danh sách voucher",
+        "events": "Danh sách sự kiện",
+        "scheduleBookings": "Danh sách lịch hẹn",
+        "posts": "Danh sách bài đăng",
+        "advList": "Danh sách quảng cáo",
+        "loyalties": "Hạng hội viên",
+        "revenueShop": "Cửa hàng"
+    },
+    "label": {
+        "nonSelect": "Chưa chọn",
+        "nameShop": "Tên shop",
+        "phoneNumber": "Số điện thoại",
+        "gender": "Giới tính",
+        "service": "Dịch vụ",
+        "province": "Tỉnh/Thành phố",
+        "district": "Quận/Huyện",
+        "address": "Địa chỉ",
+        "status": "Trạng thái",
+        "activeStatus": "Hoạt động",
+        "pauseStatus": "Tạm ngưng",
+        "receiveStatus": "Đã tiếp nhận",
+        "confirmStatus": "Đã xác nhận",
+        "successStatus": "Đã hoàn thành",
+        "cancelStatus": "Đã hủy",
+        "record": "Bản ghi",
+        "all": "Tất cả"
+    },
+    "columnHeaders": {
+        "id": "ID",
+        "amount": "Số lượng",
+        "applyService": "Dịch vụ áp dụng",
+        "cashDiscount": "Giảm giá tiền mặt",
+        "endDate": "Ngày kết thúc",
+        "idImage": "Hình ảnh ID",
+        "imageUrl": "URL hình ảnh",
+        "name": "Tên",
+        "percentDiscount": "Giảm giá phần trăm",
+        "startDate": "Ngày bắt đầu",
+        "type": "Loại"
+    }
+}

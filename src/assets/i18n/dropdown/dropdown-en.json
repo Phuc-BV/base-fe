@@ -1,0 +1,40 @@
+{
+    "status": [
+        {
+            "value": 0,
+            "name": "Activate"
+        },
+        {
+            "value": 1,
+            "name": "Deactivate"
+        }
+    ],
+    "statusBooking": [
+        {
+            "value": 0,
+            "name": "Received"
+        },
+        {
+            "value": 1,
+            "name": "Confirmed"
+        },
+        {
+            "value": 2,
+            "name": "Accomplished"
+        },
+        {
+            "value": 3,
+            "name": "Cancelled"
+        }
+    ],
+    "gender": [
+        {
+            "value": 0,
+            "name": "Male"
+        },
+        {
+            "value": 1,
+            "name": "Female"
+        }
+    ]
+}

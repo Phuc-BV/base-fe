@@ -1,0 +1,178 @@
+<div class="sidebar" style="box-shadow: 0px 2px 6px 0px rgba(67, 89, 113, 0.12);">
+    <ul class="nav-links" (click)="toggleSubMenu($event)">
+        <li>
+            <div class="icon-link parent-menu" routerLinkActive="active-menu" routerLink="/dashboard"
+                style="height: 50px;">
+                <a>
+                    <img class="img_menu" src="../assets/img/icon_home.png" alt="" />
+                    <span class="link_name father pl-2">{{ "menu.home" | translate }}</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" src="../assets/img/icon_name_shop.png" alt="" />
+                    <span class="link_name father pl-2">{{ "menu.shop" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li class="col-12" routerLinkActive="active-menu" routerLink="/shop/list">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.shopStore" | translate }}</span>
+                    </a>
+                </li>
+                <li class="col-12" routerLinkActive="active-menu" routerLink="/shop/owner">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.shopOwner" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_name_customer.png" />
+                    <span class="link_name father pl-2">{{ "menu.customer" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/customer">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.customers" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_user_admin.png" />
+                    <span class="link_name father pl-2">{{ "menu.admin" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/admin">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.admins" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_path.png" />
+                    <span class="link_name father pl-2">{{ "menu.endow" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/endow/event">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.vouchers" | translate }}</span>
+                    </a>
+                </li>
+                <li routerLinkActive="active-menu" routerLink="/endow/voucher">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.events" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_schedule.png" />
+                    <span class="link_name father pl-2">{{ "menu.scheduleBooking" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/schedule">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.scheduleBookings" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_post.png" />
+                    <span class="link_name father pl-2">{{ "menu.post" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/post">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.posts" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_commercial.png" />
+                    <span class="link_name father pl-2">{{ "menu.adv" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/commercial">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.advList" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_loyalty.png" />
+                    <span class="link_name father pl-2">{{ "menu.loyalty" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/loyalty">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.loyalties" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link parent-menu">
+                <a>
+                    <img class="img_menu" alt="" src="../assets/img/icon_doanh_thu.png" />
+                    <span class="link_name father pl-2">{{ "menu.revenue" | translate }}</span>
+                </a>
+                <i class="pi pi-chevron-right bx bxs-chevron-down arrow father"></i>
+            </div>
+            <ul class="sub-menu">
+                <li routerLinkActive="active-menu" routerLink="/revenue/shop">
+                    <a class="w-full">
+                        <i class="pi pi-circle-fill bx bx-collection icon-menu"></i>
+                        <span class="pl-2">{{ "menu.revenueShop" | translate }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

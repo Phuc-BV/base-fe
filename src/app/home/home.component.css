@@ -1,0 +1,20 @@
+#mySidebar {
+    height: 100%;
+    width: 205px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    box-shadow: 0px 4px 20px #D9DDFC;
+    position: fixed;
+}
+
+#main {
+    transition: all 0.1s ease;
+    width: calc(100% - 205px);
+    height: 100vh;
+    margin-left: 205px;
+    overflow-y: auto;
+    background-color: #eff3f8;
+}

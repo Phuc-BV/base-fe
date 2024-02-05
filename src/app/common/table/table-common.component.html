@@ -1,0 +1,79 @@
+<div class="grid col-12 p-0 m-0">
+    <div class="col-4 flex align-items-center pl-0">
+        <div class="align-items-center">
+            <label class="text-sm font-semibold">[{{startItem}} - {{endItem}} {{ 'label.record' | translate }} ({{
+                'label.all' | translate }} {{totalRecord}} <label style="text-transform: lowercase">{{ 'label.record' |
+                    translate }}</label>)]</label>
+        </div>
+    </div>
+    <div class="col-5 flex align-items-center">
+        <div *ngIf="showStatus ==1" class="flex flex-wrap gap-2 align-items-center">
+            <label class="text-sm font-semibold">{{ 'label.status' | translate }}:</label>
+            <label *ngFor="let option of statusSearch">
+                <input type="radio" (change)="emitterStatus(option.value)" name="option" [value]="option.value"
+                    [(ngModel)]="selectedOption">
+                {{ option.name }}
+            </label>
+        </div>
+        <div *ngIf="showStatus ==2" class="flex flex-wrap gap-2 align-items-center">
+            <label class="text-sm font-semibold">{{ 'label.status' | translate }}:</label>
+            <label *ngFor="let option of statusBooking">
+                <input type="radio" class="m-0" (change)="emitterStatus(option.value)" name="option"
+                    [value]="option.value" [(ngModel)]="selectedOption">
+                {{ option.name }}
+            </label>
+        </div>
+    </div>
+    <div class="col-3 flex align-items-center justify-content-end pr-0">
+        <p-paginator [rows]="pageSize" (onPageChange)="emitterPaginator($event)"
+            [totalRecords]="totalRecord==0?1:totalRecord" [pageLinkSize]="pageLinkSize" #paginator>
+        </p-paginator>
+    </div>
+</div>
+<div class="col-12 m-0 p-0">
+    <p-table [value]="data" selectionMode="single" styleClass="p-datatable-gridlines p-datatable-striped sticky-table"
+        [scrollable]="true" [scrollHeight]="scrollHeight">
+        <ng-template pTemplate="header">
+            <tr>
+                <ng-container *ngFor="let column of columns; let last = last">
+                    <ng-container *ngIf="column.showField">
+                        <th [id]="column.field" [style.width]="column.width" [style.min-width]="column.width"
+                            class="text-center">
+                            {{ translateHeader(column.header) }}
+                        </th>
+                    </ng-container>
+                </ng-container>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData>
+            <tr>
+                <ng-container *ngFor="let column of columns;">
+                    <ng-container *ngIf="column.showField">
+                        <td [id]="column.field" class="text-center">
+                            <span *ngIf="column.field == 'id' && isDetail"
+                                class="text-primary cursor-pointer id text-center block"
+                                (click)="emitChangeEdit(rowData)">{{
+                                rowData.id
+                                }}</span>
+                            <span *ngIf="column.field == 'id' && !isDetail" class="text-center block">{{
+                                rowData.id
+                                }}</span>
+                            <span *ngIf="column.field !== 'id' && column.field !== 'status' ">{{
+                                rowData[column.field]
+                                }}</span>
+                            <span *ngIf="column.field !== 'id' && column.field === 'status'">
+                                <app-status-search [status]="rowData[column.field]"></app-status-search>
+                            </span>
+                            <div class="flex justify-content-evenly">
+                                <i *ngIf="column.action === 'ED'" (click)="emitChangeDelete(rowData)"
+                                    class="pi pi-pencil cursor-pointer"></i>
+                                <i *ngIf="column.action === 'ED'" (click)="emitChangeDelete(rowData)"
+                                    class="pi pi-eye cursor-pointer"></i>
+                            </div>
+                        </td>
+                    </ng-container>
+                </ng-container>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

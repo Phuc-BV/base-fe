@@ -1,0 +1,193 @@
+.menu-left .pi {
+    font-size: 1.25rem;
+    height: 2rem;
+    width: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-left .pi:hover {
+    background-color: #E0E0E0;
+    color: aliceblue;
+    border-radius: 50%;
+}
+
+.pi-bell {
+    width: 2.25rem;
+    height: 2.25rem;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    font-size: 1.25rem;
+}
+
+.pi-bell:hover {
+    background-color: #E0E0E0;
+    border-radius: 50%;
+}
+
+:host ::ng-deep .p-badge {
+    font-weight: 600;
+    min-width: 1.25rem !important;
+    height: 1.25rem !important;
+    line-height: 1.25rem !important;
+}
+
+#profile {
+    transition: 0.3s;
+}
+
+.profile-dropdown {
+    position: relative;
+    width: fit-content;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.profile-dropdown-list {
+    position: absolute;
+    width: 135px;
+    right: 10px;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 5px;
+    top: 43px;
+    display: none;
+}
+
+.profile-dropdown-list.active {
+    transition: all 0.5s ease;
+    display: unset;
+}
+
+.profile-dropdown-list.active::before {
+    content: "";
+    transform: rotate(45deg);
+    top: -7px;
+    position: absolute;
+    width: 15px;
+    right: 17px;
+    height: 15px;
+    display: flex;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.profile-dropdown-lits-item {
+    padding: 0.5rem;
+    transition: 0.5s;
+}
+
+.profile-dropdown-lits-item:hover {
+    background-color: rgba(255, 156, 134, 0.16);
+    border-radius: 5px;
+}
+
+.profile-dropdown-lits-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: black;
+    padding: 0.25rem;
+}
+
+.profile-dropdown-lits-item i {
+    font-size: 14px;
+    margin-right: 7px;
+}
+
+.profile-dropdown-lits-item span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.fadein {
+    animation: fadein 0.5s linear !important;
+}
+
+.lang-dropdown-list {
+    display: none;
+}
+
+.lang-dropdown-list.active {
+    transition: all 0.5s ease;
+    display: unset;
+}
+
+.lang-dropdown-list {
+    background-color: #fff;
+    position: absolute;
+    right: 161px;
+    width: 130px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0rem;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+    top: 72px;
+}
+
+.lang-menu {
+    width: 70px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.lang-menu .selected-lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lang-menu ul li {
+    padding: 0.5rem;
+}
+
+.lang-menu .lang-dropdown-list li span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lang-menu ul li:hover {
+    background-color: rgba(255, 156, 134, 0.16);
+    border-radius: 5px;
+}
+
+.lang-menu .active::before {
+    content: "";
+    transform: rotate(45deg);
+    top: -7px;
+    position: absolute;
+    width: 15px;
+    right: 17px;
+    height: 15px;
+    display: flex;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+:host ::ng-deep .p-avatar {
+    height: 2.2rem;
+}

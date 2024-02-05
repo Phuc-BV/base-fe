@@ -1,0 +1,40 @@
+{
+    "status": [
+        {
+            "value": 0,
+            "name": "Hoạt động"
+        },
+        {
+            "value": 1,
+            "name": "Tạm ngưng"
+        }
+    ],
+    "statusBooking": [
+        {
+            "value": 0,
+            "name": "Đã tiếp nhận"
+        },
+        {
+            "value": 1,
+            "name": "Đã xác nhận"
+        },
+        {
+            "value": 2,
+            "name": "Đã hoàn thành"
+        },
+        {
+            "value": 3,
+            "name": "Đã hủy"
+        }
+    ],
+    "gender": [
+        {
+            "value": 0,
+            "name": "Nam"
+        },
+        {
+            "value": 1,
+            "name": "Nữ"
+        }
+    ]
+}

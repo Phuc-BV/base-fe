@@ -1,0 +1,55 @@
+<div class="min-h-screen overflow-hidden min-w-screen align-items-center justify-content-center flex"
+    style="background-color: rgba(255, 156, 134, 0.6);">
+    <div class="align-items-center justify-content-center flex">
+        <div class="border-round-2xl shadow-4">
+            <div class="border-round-2xl surface-border surface-card border-round py-7 px-4 md:px-7 z-1">
+                <div class="mb-4">
+                    <div class="text-900 text-xl font-bold mb-2 text-center">
+                        <img id="logo-img" [src]="'/assets/img/WOW.svg'" alt="LOGO">
+                    </div>
+                </div>
+                <form [formGroup]="formGroupLogin">
+                    <span class="font-medium err" *ngIf="loginFail">Vui lòng nhập lại tên người dùng hoặc mật
+                        khẩu</span>
+                    <div class="flex flex-column">
+                        <div class="col-12 m-0 p-0 mb-3">
+                            <input class="col-12 w-22rem" type="text" formControlName="loginId" name="userName"
+                                [ngClass]="{ 'ng-dirty': submit && f['loginId'].errors && f['loginId'].errors['required'] }"
+                                placeholder="Tên đăng nhập" pInputText (keypress)="keypress($event)" />
+                            <div class="p-error"
+                                *ngIf="submit && f['loginId'].errors &&  f['loginId'].errors['required'] ">
+                                Không được để trống giá trị</div>
+                        </div>
+                        <div class="col-12 m-0 p-0 mb-3">
+                            <div class="col-12 p-0 w-22rem">
+                                <p-password [toggleMask]="true" formControlName="password" [feedback]="false"
+                                    id="password" styleClass="w-full" placeholder="Nhập mật khẩu" name="password"
+                                    (keyup)="keyup($event)"
+                                    [ngClass]="{ 'ng-dirty': submit && f['password'].errors && f['password'].errors['required'] }"></p-password>
+                                <div class="p-error"
+                                    *ngIf="submit && f['password'].errors && f['password'].errors['required'] ">Không
+                                    được để trống giá trị</div>
+                            </div>
+                        </div>
+                        <div class="mb-2 flex flex-wrap gap-3 justify-content-end">
+                            <div class="field-checkbox m-0 text-xs font-normal">
+                                <p-checkbox formControlName="checked" [binary]="true" inputId="binary"></p-checkbox>
+                                <label for="binary" style="color: rgba(164, 130, 122, 1);">Ghi nhớ đăng nhập</label>
+                            </div>
+                        </div>
+                        <hr class="w-full mb-3" />
+                        <button type="submit" label="Log In" class="p-element w-full p-button p-component" tabindex="0"
+                            (click)="login()"><span class="p-button-label">Đăng nhập</span></button>
+                        <div class="flex justify-content-center mt-2">
+                            <span class="font-semibold text-sm"
+                                style="color: rgba(111, 111, 112, 1);padding-right: 5px;">Bạn không thể
+                                đăng nhập?</span>
+                            <a class="text-sm font-semibold" style="color: rgba(164, 130, 122, 1);">Liên hệ trung tâm hỗ
+                                trợ</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
